@@ -2,22 +2,28 @@
 using namespace std;
 int main()
 {
-    int marks=25;
-    if (marks>=40 && marks<50)
-    {
-        cout<<"A"<<endl;
+    int marks[3];
+    // Input marks for 3 students
+    for(int i = 0; i < 3; i++) {
+        cout << "Enter marks for student " << i + 1 << ": ";
+        cin >> marks[i];
     }
-    else if (marks>=30 && marks<40)
-    {
-        cout<<"B"<<endl;
-    }
-    else if (marks>=20 && marks<30)
-    {
-        cout<<"C"<<endl;
-    }
-    else
-    {
-        cout<<"F"<<endl;
+
+    // Print grades for each student
+    for(int i = 0; i < 3; i++) {
+        cout << "Student " << i + 1 << " grade: ";
+        if (marks[i] >= 40 && marks[i] < 50) {
+            cout << "A" << endl;
+        }
+        else if (marks[i] >= 30 && marks[i] < 40) {
+            cout << "B" << endl;
+        }
+        else if (marks[i] >= 20 && marks[i] < 30) {
+            cout << "C" << endl;
+        }
+        else {
+            cout << "F" << endl;
+        }
     }
     return 0;
 }

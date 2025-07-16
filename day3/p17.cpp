@@ -3,14 +3,22 @@
 using namespace std;
 int main()
 {
-    int year=2004;
-    if (2004%4==0)
+    cout<<"Enter 10 years: ";
+    int year[10];
+    for(int i=0; i<10; i++) 
     {
-        cout<<"The year is a leap year."<<endl;
+        cin>>year[i];
+    }
+    for(int i=0; i<10; i++)
+    {
+    if (year[i]%4==0)
+    {
+        cout<<year[i]<<" The year is a leap year."<<endl;
     }
     else
     {
-        cout<<"The year is not a leap year."<<endl;
+        cout<<year[i]<<" The year is not a leap year."<<endl;
+    }
     }
     return 0;
 }
